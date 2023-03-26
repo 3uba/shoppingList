@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingList.Pages.AddPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <StackLayout Padding="0, 20">
+                <Entry x:Name="name"
+                       Placeholder="Name"/>
+            </StackLayout>
+            <StackLayout Padding="0, 20">
+                <Entry x:Name="qunatity"
+                       Placeholder="Quantity"/>
+            </StackLayout>
+            <StackLayout Padding="0, 20">
+                <Entry x:Name="type"
+                       Placeholder="Type"/>
+            </StackLayout>
+            <Button Clicked="Button_OnClicked" Padding="0, 20" Text="Add" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

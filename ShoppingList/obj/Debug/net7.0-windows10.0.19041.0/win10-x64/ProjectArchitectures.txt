@@ -1,0 +1,1 @@
+C:\Users\jkbbu\Documents\mauiProjects\ShoppingList\ShoppingList\ShoppingList.csproj;x64
