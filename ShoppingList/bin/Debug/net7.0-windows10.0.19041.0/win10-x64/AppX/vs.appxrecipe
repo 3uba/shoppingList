@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\jkbbu\Documents\mauiProjects\ShoppingList\ShoppingList\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-03-26T13:51:47.284</Modified>
+      <Modified>2023-03-26T17:08:08.827</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jkbbu\Documents\mauiProjects\ShoppingList\ShoppingList\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-03-26T13:51:46.931</Modified>
+      <Modified>2023-03-26T17:08:08.488</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jkbbu\Documents\mauiProjects\ShoppingList\ShoppingList\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\ShoppingList.runtimeconfig.json">
       <PackagePath>ShoppingList.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jkbbu\Documents\mauiProjects\ShoppingList\ShoppingList\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\ShoppingList.dll">
       <PackagePath>ShoppingList.dll</PackagePath>
-      <Modified>2023-03-26T13:51:46.606</Modified>
+      <Modified>2023-03-26T17:08:08.164</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jkbbu\Documents\mauiProjects\ShoppingList\ShoppingList\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ShoppingList.exe</PackagePath>
-      <Modified>2023-03-26T13:51:46.629</Modified>
+      <Modified>2023-03-26T17:08:08.188</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jkbbu\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.2\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -951,7 +951,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jkbbu\Documents\mauiProjects\ShoppingList\ShoppingList\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ShoppingList.deps.json">
       <PackagePath>ShoppingList.deps.json</PackagePath>
-      <Modified>2023-03-26T13:51:47.196</Modified>
+      <Modified>2023-03-26T17:08:08.744</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.59\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

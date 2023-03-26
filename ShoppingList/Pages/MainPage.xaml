@@ -4,10 +4,6 @@
              xmlns:controls='clr-namespace:ShoppingList.Views'
              x:Class="ShoppingList.Pages.MainPage">
 
-    <StackLayout Padding="20">
-        <ScrollView>
-            <controls:ItemsList />
-        </ScrollView>
-    </StackLayout>
+    <controls:ItemsList />
 </ContentPage>
  

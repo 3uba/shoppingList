@@ -1,37 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Net.Http.Json;
+﻿using System.Collections.ObjectModel;
 using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using SQLite;
 using Newtonsoft.Json;
+using ShoppingList.Models;
 
 namespace ShoppingList.Views;
 
 public partial class ItemsList : ContentView
 {
-    public class Item
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Quantity { get; set; }
-        public bool Mark { get; set; }
-        public string Type { get; set; }
-
-        public Item () {}
-        public Item(string name, string quantity, string type = "Other", bool mark = false)
-        {
-            Name = name;
-            Quantity = quantity;
-            Type = type;
-            Mark = mark;
-        }
-    }
-
-    public ObservableCollection<Item> shoppingList = new ObservableCollection<Item>();
+    public static ObservableCollection<Item> shoppingList = new ObservableCollection<Item>();
     public ObservableCollection<Item> ShoppingList
     {
         get { return shoppingList; }
@@ -42,10 +18,10 @@ public partial class ItemsList : ContentView
         LoadData();
         ShoppingListView.ItemsSource = shoppingList;
     }
-
     
-    public async void LoadData()
+    public static async void LoadData()
     {
+        shoppingList.Clear();
         try
         {
             string apiUrl = "http://localhost:3000/api/list";
@@ -99,7 +75,7 @@ public partial class ItemsList : ContentView
     {
         Button button = sender as Button;
         Item item = button.BindingContext as Item;
-        int id = item.Id;
+        int id = (int)button.CommandParameter;
 
         using (HttpClient httpClient = new HttpClient())
         {

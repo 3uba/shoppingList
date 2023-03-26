@@ -17,7 +17,7 @@
                 <Entry x:Name="type"
                        Placeholder="Type"/>
             </StackLayout>
-            <Button Clicked="Button_OnClicked" Padding="0, 20" Text="Add" />
+            <Button BackgroundColor="CadetBlue" Clicked="Button_OnClicked" Padding="0, 20" Text="Add" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
