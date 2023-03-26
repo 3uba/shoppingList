@@ -2,8 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls='clr-namespace:ShoppingList.Views'
+             xmlns:converters="clr-namespace:ShoppingList.Converters"
              x:Class="ShoppingList.Pages.MainPage">
-
+    <ContentPage.Resources>
+        <converters:MarkToBackgroundConverter x:Key="markToBackgroundConverter" />
+    </ContentPage.Resources>
     <controls:ItemsList />
 </ContentPage>
  

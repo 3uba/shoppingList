@@ -2,28 +2,16 @@
 
 namespace ShoppingList.Converters;
 
-public class MarkToBackgroundConverter : IMarkupExtension, IValueConverter
+public class MarkToBackgroundConverter : IValueConverter
 {
-    public object NullValue { get; set; }
-    public object NotNullValue { get; set; }
-
-    public object ProvideValue(IServiceProvider serviceProvider)
-    {
-        return this;
-    }
-    
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        if (value is bool mark && mark)
-        {
-            return new SolidColorBrush(Colors.Grey);
-        }
-
-        return new SolidColorBrush(Colors.Transparent);
+        bool mark = (bool)value;
+        return mark ? Color.FromRgb(30,30,30) : Color.FromRgba(0,0,0,0);
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        throw new NotImplementedException();
+        return (bool)value ? 1 : 0;
     }
 }
