@@ -2,16 +2,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:converters="clr-namespace:ShoppingList.Converters"
              x:Class="ShoppingList.Views.ItemsList">
-
+    
+    <ContentView.Resources>
+        <converters:MarkToBackgroundConverter x:Key="BackgroundConverter"/>
+    </ContentView.Resources>
+    
     <ScrollView>
         <StackLayout Orientation="Vertical">
             <ListView x:Name="ShoppingListView" ItemsSource="{Binding ShoppingList}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <VerticalStackLayout Padding="0, 10" >
-                                <!-- BackgroundColor="{Binding Mark, Converter={StaticResource converters:MarkToBackgroundConverter}}" -->
-
+                            <StackLayout Orientation="Vertical" Padding="0, 10" Background="{Binding Mark, Converter={StaticResource BackgroundConverter}}">
                                 <Grid Padding="20, 20">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
@@ -21,9 +23,9 @@
                                     <Label Grid.Column="1" HorizontalTextAlignment="End" TextColor="Black" FontSize="20" Text="{Binding Quantity}"/>
                                 </Grid>
                                 <!-- <Label TextColor="Black" FontSize="20" Text="{Binding Type}"  /> -->
-                                <!-- <Button Text="Zaznacz" BackgroundColor="CadetBlue" Clicked="ToggleButton_Clicked" CommandParameter="{Binding Id}" /> -->
+                                <Button Text="Zaznacz" BackgroundColor="CadetBlue" Clicked="ToggleButton_Clicked" CommandParameter="{Binding Id}" />
                                 <Button Text="Usuń" BackgroundColor="Red" Clicked="DeleteButton_Clicked" CommandParameter="{Binding Id}" />
-                            </VerticalStackLayout>
+                            </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

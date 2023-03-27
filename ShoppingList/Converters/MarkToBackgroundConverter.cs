@@ -7,7 +7,7 @@ public class MarkToBackgroundConverter : IValueConverter
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         bool mark = (bool)value;
-        return mark ? Color.FromRgb(30,30,30) : Color.FromRgba(0,0,0,0);
+        return mark ? Colors.Gray : Colors.Transparent;
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

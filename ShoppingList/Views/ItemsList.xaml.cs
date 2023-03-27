@@ -76,7 +76,8 @@ public partial class ItemsList : ContentView
         Button button = sender as Button;
         Item item = button.BindingContext as Item;
         int id = (int)button.CommandParameter;
-
+        StackLayout sl = button.Parent as StackLayout;
+        
         using (HttpClient httpClient = new HttpClient())
         {
             string url = $"http://localhost:3000/api/list/{id}";
@@ -96,6 +97,14 @@ public partial class ItemsList : ContentView
             if (response.IsSuccessStatusCode)
             {
                 item.Mark = !item.Mark;
+                if (item.Mark)
+                {
+                    sl.Background = Colors.Gray;
+                }
+                else
+                {
+                    sl.Background = Colors.Transparent;
+                }
             }
             else
             {
