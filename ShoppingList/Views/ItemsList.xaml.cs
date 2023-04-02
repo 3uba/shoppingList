@@ -16,9 +16,10 @@ public partial class ItemsList : ContentView
     {
         InitializeComponent();
         LoadData();
+        
         ShoppingListView.ItemsSource = shoppingList;
     }
-    
+
     public static async void LoadData()
     {
         shoppingList.Clear();
@@ -32,11 +33,12 @@ public partial class ItemsList : ContentView
             {
                 string responseData = await response.Content.ReadAsStringAsync();
                 List<Item> items = JsonConvert.DeserializeObject<List<Item>>(responseData);
-
+                items = items.OrderBy(i => i.Type, StringComparer.InvariantCulture).ToList();
+                
                 foreach (Item item in items)
                 {
                     shoppingList.Add(item);
-                }
+                } 
             }
             else
             {
@@ -48,6 +50,7 @@ public partial class ItemsList : ContentView
             Console.WriteLine("Error: " + ex.Message);
         }
     }
+
     
     private async void DeleteButton_Clicked(object sender, EventArgs e)
     {

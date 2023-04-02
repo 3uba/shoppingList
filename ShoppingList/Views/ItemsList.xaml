@@ -10,6 +10,11 @@
     <ScrollView>
         <StackLayout Orientation="Vertical">
             <ListView x:Name="ShoppingListView" ItemsSource="{Binding ShoppingList}">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Type}" FontSize="Large" FontAttributes="Bold" Margin="10, 10, 0, 5" />
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
