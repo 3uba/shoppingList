@@ -12,17 +12,17 @@
         <StackLayout Padding="20">
             <StackLayout Padding="0, 20">
                 <Entry x:Name="name"
-                       Placeholder="Name"/>
+                       Placeholder="Nazwa"/>
             </StackLayout>
             <StackLayout Padding="0, 20">
                 <Entry x:Name="qunatity"
-                       Placeholder="Quantity"/>
+                       Placeholder="Ilość"/>
             </StackLayout>
             <StackLayout Padding="0, 20">
                 <Entry x:Name="type"
-                       Placeholder="Type"/>
+                       Placeholder="Typ/Rodzaj"/>
             </StackLayout>
-            <Button BackgroundColor="CadetBlue" Clicked="Button_OnClicked" Padding="0, 20" Text="Add" />
+            <Button BackgroundColor="CadetBlue" Clicked="Button_OnClicked" Padding="0, 20" Text="Dodaj" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

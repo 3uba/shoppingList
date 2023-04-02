@@ -5,6 +5,7 @@
     
     <ContentView.Resources>
         <converters:MarkToBackgroundConverter x:Key="BackgroundConverter"/>
+        <converters:MarkToTextConverter x:Key="TextConverter"/>
     </ContentView.Resources>
     
     <ScrollView>
@@ -12,7 +13,7 @@
             <ListView x:Name="ShoppingListView" ItemsSource="{Binding ShoppingList}">
                 <ListView.HeaderTemplate>
                     <DataTemplate>
-                        <Label Text="{Binding Type}" FontSize="Large" FontAttributes="Bold" Margin="10, 10, 0, 5" />
+                       
                     </DataTemplate>
                 </ListView.HeaderTemplate>
                 <ListView.ItemTemplate>
@@ -24,11 +25,16 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" TextColor="Black" FontSize="20" Text="{Binding Name}"/>
-                                    <Label Grid.Column="1" HorizontalTextAlignment="End" TextColor="Black" FontSize="20" Text="{Binding Quantity}"/>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Type}" FontSize="14" TextColor="Gray"></Label>
+                                    <Label Grid.Row="1" Grid.Column="0" TextColor="Black" FontSize="20" Text="{Binding Name}"/>
+                                    <Label Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="End" TextColor="Black" FontSize="20" Text="{Binding Quantity}"/>
                                 </Grid>
                                 <!-- <Label TextColor="Black" FontSize="20" Text="{Binding Type}"  /> -->
-                                <Button Text="Zaznacz" BackgroundColor="CadetBlue" Clicked="ToggleButton_Clicked" CommandParameter="{Binding Id}" />
+                                <Button Text="{Binding Mark, Converter={StaticResource TextConverter}}" BackgroundColor="CadetBlue" Clicked="ToggleButton_Clicked" CommandParameter="{Binding Id}" />
                                 <Button Text="Usuń" BackgroundColor="Red" Clicked="DeleteButton_Clicked" CommandParameter="{Binding Id}" />
                             </StackLayout>
                         </ViewCell>

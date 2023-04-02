@@ -102,11 +102,13 @@ public partial class ItemsList : ContentView
                 item.Mark = !item.Mark;
                 if (item.Mark)
                 {
-                    sl.Background = Colors.Gray;
+                    sl.Background = Colors.Grey;
+                    button.Text = "Odznacz";
                 }
                 else
                 {
                     sl.Background = Colors.Transparent;
+                    button.Text = "Zaznacz";
                 }
             }
             else
